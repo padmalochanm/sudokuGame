@@ -367,7 +367,7 @@ function incorrectComplete() {
     grid.classList.add("blur-background");
     document.getElementById("resumeButton").addEventListener("click", resumeSolving);
     document.getElementById("newG").addEventListener("click", function() {
-        window.location.href="./index.html";
+        window.location.href="index.html";
       });
   }
   
