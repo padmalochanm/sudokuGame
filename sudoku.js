@@ -201,7 +201,7 @@ document.getElementById('submit').addEventListener('click', () => {
 });
 
 document.getElementById("close-dialog-button").addEventListener("click", function() {
-    window.location.href="./homepage.html";
+    window.location.href="./index.html";
   });
 const sudokugrid = document.getElementById('sudokugrid');
 function setGame() {
@@ -367,7 +367,7 @@ function incorrectComplete() {
     grid.classList.add("blur-background");
     document.getElementById("resumeButton").addEventListener("click", resumeSolving);
     document.getElementById("newG").addEventListener("click", function() {
-        window.location.href="./homepage.html";
+        window.location.href="./index.html";
       });
   }
   
@@ -399,23 +399,6 @@ function clearSudokuGrid() {
     board.innerHTML = ""; 
   }
 
-  function generateSudokuGrid() {
-    for (let i = 0; i < 81; i++) {
-      const cell = document.createElement('div');
-      cell.classList.add('cell');
-      var r = Math.floor(i/9);
-      var c = i%9;
-      cell.id = r.toString() + "-" + c.toString();
-      if (board[r][c] != 0) {
-        cell.innerText = String(board[r][c]);
-        //tile.classList.add("tile-start");
-      }
-      else if(board[r][c] == 0){
-        cell.innerText = "";
-      }
-      sudokugrid.appendChild(cell);
-    }
-  }
 
 
 
