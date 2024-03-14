@@ -7,6 +7,9 @@ body {
   justify-content: center;
   align-items: center;
   gap: 5rem;
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
 }
 
 .screen{
@@ -184,4 +187,109 @@ h2, p{
 
 .blur-background {
   filter: blur(3px);
+}
+
+@media screen and (max-width: 768px) {
+  .screen{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 90vw;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 70px;
+  }
+  .sudokugrid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 2px; /* Adjust gap as needed */
+    width: 360px; /* Set a width for the grid */
+    height: 360px; /* Set a height for the grid */
+    border: 0.5rem solid #f4f4f4;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    border-radius: 0.6rem;
+    align-self: center;
+    margin-left: 50px;
+  }
+  .cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25em;
+    border: 0.2rem solid #11999e;
+    background-color: #6decd9;
+    border-radius: 5px;
+    /* Text */
+    font-weight: bolder;
+    color: darkblue;
+  }
+  
+  .cell-start{
+    background-color: rgb(108, 238, 255);
+  }
+  
+  .cell:hover{
+    border: 5px solid red;
+    background-color: aquamarine;
+  }
+  .btn-grp{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .btn{
+    font-size: 25px;
+    font-weight: bold;
+    border: #f4f4f4;
+  }
+  .horizontal-line {
+  border-bottom: 5px solid darkblue;
+}
+.horizontal-lineOne {
+  border-top: 5px solid darkblue;
+}
+.vertical-line {
+  border-right: 5px solid darkblue;
+}
+.vertical-lineOne {
+  border-left: 5px solid darkblue;
+}
+  .timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .number {
+    width: 36px; 
+    height: 36px;
+    border: 1px solid darkblue;
+    margin: 2px;
+    border-radius: 6px;
+    background-color: #f4f4f4;
+    /* Text */
+    font-size: 20px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.1s;
+  }
+  
+  .number:hover{
+    width: 39px; 
+    height: 39px;
+    border: 2px solid darkblue;
+    background-color: skyblue;
+    border-radius: 15px;
+    font-size: 30px;  
+  }
 }
