@@ -203,7 +203,8 @@ document.getElementById('submit').addEventListener('click', () => {
 document.getElementById("close-dialog-button").addEventListener("click", function() {
     window.location.href="./index.html";
   });
-const sudokugrid = document.getElementById('sudokugrid');
+
+  const sudokugrid = document.getElementById('sudokugrid');
 function setGame() {
     // Digits 1-9
     for (let i = 1; i <= 9; i++) {
